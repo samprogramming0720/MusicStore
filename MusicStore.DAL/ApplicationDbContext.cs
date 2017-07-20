@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using MusicStore.Entities;
 using MusicStore.DAL.EntityConfigurations;
+using MusicStore.DAL.Migrations;
 
 namespace MusicStore.DAL
 {
@@ -35,6 +36,8 @@ namespace MusicStore.DAL
             modelBuilder.Configurations.Add(new ApplicationUserLoginConfiguration());
             modelBuilder.Configurations.Add(new ApplicationRoleConfiguration());
             #endregion
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>)();
+            
         }
 
     }
