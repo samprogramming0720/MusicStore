@@ -1,0 +1,99 @@
+﻿<div class="jumbotron">
+    <h3 class="h3">{{selectedAlbum.Name}}</h3>
+    <div class="container text-center">
+        <img alt="{{selectedAlbum.Name}}" ng-src="../../../Content/images/AlbumCover/{{selectedAlbum.AlbumCover}}" class="pull-left" height="120" />
+        <br />
+    </div> <!-- end container -->
+</div>
+<div id="editMusicWrapper">
+    <div class="row">
+        <!-- edit form column -->
+        <div class="col-xs-9">
+            <form class="form-horizontal" role="form" novalidate angular-validator name="addMusicForm" angular-validator-submit="addItem()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-8">
+                            <label class="control-label">Artist Name</label>
+                            <md-autocomplete md-no-cache="true"
+                                             md-selected-item="selectedArtist"
+                                             md-search-text="searchArtistText"
+                                             md-items="artistItem in querySearchArtist(searchArtistText)"
+                                             md-item-text="artistItem.Name"
+                                             md-min-length="1"
+                                             placeholder="Artist Name">
+                                <md-item-template>
+                                    <span md-highlight-text="searchText1"
+                                          md-highlight-flags="i">
+                                        {{artistItem.Name}}
+                                    </span>
+                                </md-item-template>
+                                <md-not-found>
+                                    <a ng-href="#/artist/add">No match found. Click here to add the artist.</a>
+                                </md-not-found>
+                            </md-autocomplete>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-hide="selectedArtist === null">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-8">
+                            <label class="control-label">Album Title</label>
+                            <md-autocomplete md-no-cache="true"
+                                             md-selected-item="selectedAlbum"
+                                             md-search-text="searchAlbumText"
+                                             md-items="albumItem in querySearchAlbum(searchAlbumText)"
+                                             md-item-text="albumItem.AlbumTitle"
+                                             md-min-length="1"
+                                             placeholder="Album Title">
+                                <md-item-template>
+                                    <span md-highlight-text="searchAlbumText"
+                                          md-highlight-flags="i">
+                                        {{albumItem.AlbumTitle}}
+                                    </span>
+                                </md-item-template>
+                                <md-not-found>
+                                    <a ng-href="#/album/add">No match found. Click here to add the album.</a>
+                                </md-not-found>
+                            </md-autocomplete>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-hide="selectedAlbum === null">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-4">
+                            <label class="control-label">Music Title</label>
+                            <input class="form-control" name="Title" type="text" ng-model="item.Title"
+                                   validate-on="blur" placeholder="Music Title" 
+                                   required required-message="'Music Title is required'">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-hide="selectedAlbum === null">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-4">
+                            <label class="control-label">Genre</label>
+                            <input class="form-control" name="Genre" type="text" ng-model="item.Genre"
+                                   placeholder="Genre">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group" ng-hide="selectedAlbum === null">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-4">
+                            <label class="control-label">MusicVideoURI</label>
+                            <input class="form-control" name="Music Video" type="text" ng-model="item.MusicVideoURI"
+                                   validate-on="blur" placeholder="MusicVideoURI"
+                                   ng-pattern="/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/"
+                                   invalid-message="'You must enter a valid YouTube URL'">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" ng-disabled="selectedAlbum === null" 
+                           value="Submit Music" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+</div>

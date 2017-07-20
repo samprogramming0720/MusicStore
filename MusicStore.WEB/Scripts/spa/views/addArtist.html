@@ -1,0 +1,37 @@
+﻿<div id="editArtistWrapper">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-xs-3">
+            <div class="text-center">
+                <label class="control-label" style="padding-top:7px">Artist Image</label>
+                <br/>
+                <img ngf-src="imgFile" class="img-responsive" alt="File">
+                <div class="btn btn-primary" ngf-select ng-model="imgFile"
+                     nfg-pattern="'image/*'" ngf-accept="'image/*'">Select</div>
+            </div>
+        </div>
+        <!-- edit form column -->
+        <div class="col-xs-9">
+            <form class="form-horizontal" role="form" novalidate angular-validator name="addArtistForm" angular-validator-submit="addItem()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-4">
+                            <label class="control-label">Artist Name</label>
+                            <input class="form-control" name="title" type="text" ng-model="item.Name"
+                                   validate-on="blur" placeholder="Artist Name" required required-message="'Artist name is required'">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Description</label>
+                    <textarea class="form-control" ng-model="item.Description" name="description" rows="3"
+                              validate-on="blur" />
+                </div>
+                <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Submit Artist" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+</div>

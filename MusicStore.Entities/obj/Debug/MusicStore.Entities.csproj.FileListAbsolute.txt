@@ -1,0 +1,13 @@
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\MusicStore.Entities.dll
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\MusicStore.Entities.pdb
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\EntityFramework.dll
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\EntityFramework.xml
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\obj\Debug\MusicStore.Entities.csprojResolveAssemblyReference.cache
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\obj\Debug\MusicStore.Entities.dll
+C:\Users\seriskale\Documents\Visual Studio 2017\Projects\MusicStore\MusicStore.Entities\obj\Debug\MusicStore.Entities.pdb

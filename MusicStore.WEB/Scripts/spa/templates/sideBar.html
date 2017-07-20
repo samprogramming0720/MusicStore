@@ -1,0 +1,36 @@
+﻿<div id="sideBar" class="col-xs-12 col-sm-3">
+    <h3></h3>
+    <ul class="nav navbar-default nav-pills nav-stacked">
+        <!--
+        <li>
+            <a class="nav-link sidebar-item" ng-href="#/">
+                My Page
+                <i class="fa fa-user fa-fw pull-right my-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a class="nav-link sidebar-item" ng-href="#/">
+                My Playlists
+                <i class="fa fa-list fa-fw pull-right my-icon"></i>
+            </a>
+        </li>
+        <li class="nav-divider"></li>
+            -->
+        <li>
+            <a class="nav-link sidebar-item" ng-href="#/login" ng-if="!userData.isUserLoggedIn">
+                Login
+                <i class="fa fa-sign-in fa-fw pull-right my-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a class="nav-link sidebar-item" ng-href="#/register" ng-if="!userData.isUserLoggedIn">
+                Register
+                <i class="fa fa-users fa-fw pull-right my-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a class="nav-link sidebar-item" ng-click="logout();" ng-if="userData.isUserLoggedIn">Sing Out
+            <i class="fa fa-sign-out fa-fw pull-right my-icon"></i></a>
+        </li>
+    </ul>
+</div>

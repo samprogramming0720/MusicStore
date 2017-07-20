@@ -1,0 +1,60 @@
+﻿<detail-panel></detail-panel>
+<div id="editAlbumWrapper">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-xs-3">
+            <div class="text-center">
+                <label class="control-label" style="padding-top:7px">Album Cover</label>
+                <br />
+                <img ngf-src="imgFile" class="img-responsive" alt="File">
+                <div class="btn btn-primary" ngf-select ng-model="imgFile"
+                     nfg-pattern="'image/*'" ngf-accept="'image/*'">Select</div>
+            </div>
+        </div>
+        <!-- edit form column -->
+        <div class="col-xs-9">
+            <form class="form-horizontal" role="form" novalidate angular-validator name="addArtistForm" angular-validator-submit="addItem()">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-7">
+                            <label class="control-label">Artist Name</label>
+                            <md-autocomplete md-no-cache="true"
+                                             md-selected-item="selectedItem"
+                                             md-search-text="searchText"
+                                             md-items="parentItem in querySearch(searchText)"
+                                             md-item-text="parentItem.Name"
+                                             md-min-length="1"
+                                             placeholder="Artist Name">
+                                <md-item-template>
+                                    <span md-highlight-text="searchText"
+                                          md-highlight-flags="i">
+                                        {{parentItem.Name}}
+                                    </span>
+                                </md-item-template>
+                                <md-not-found>
+                                    <a ng-href="#/artist/add">No matches found. Click here to add new artist.</a>
+                                </md-not-found>
+                            </md-autocomplete>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row" ng-hide="selectedItem === null">
+                        <div class="col-xs-6 col-sm-4">
+                            <label class="control-label">Album Title</label>
+                            <input class="form-control" name="title" type="text" ng-model="item.AlbumTitle"
+                                   validate-on="blur" placeholder="Album Title" 
+                                   required required-message="'Album Title is required'">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" ng-disabled="selectedItem === null" 
+                           value="Submit Album" />
+                    <span></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+</div>

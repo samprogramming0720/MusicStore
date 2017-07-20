@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="musicStore">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Store</title>
+    @Styles.Render("~/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body ng-controller="rootCtrl">
+    <top-bar></top-bar>
+    <div class="container">
+            <side-bar></side-bar>
+            <div id="main">
+                <br />
+                <div class="col-xs-12 col-sm-9" id="PanelWrapper">
+                    <ng-view></ng-view>
+                </div>
+            </div>
+        </div>
+    @Scripts.Render("~/bundles/vendors")
+    @Scripts.Render("~/bundles/spa/modules")
+    @Scripts.Render("~/bundles/spa/main")
+    @Scripts.Render("~/bundles/spa/services")
+    @Scripts.Render("~/bundles/spa/directives")
+    @Scripts.Render("~/bundles/spa/controllers")
+</body>
+</html>

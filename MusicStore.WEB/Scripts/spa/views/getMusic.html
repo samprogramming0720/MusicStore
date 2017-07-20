@@ -1,0 +1,46 @@
+﻿<div class="panel panel-primary" id="BasePanel">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{pageTitle}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="col-xs-12 col-sm-6" ng-repeat="music in Items">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>{{music.Title}} </strong>
+                </div>
+                <div class="panel-body">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" height="120" ng-src="../../Content/images/AlbumCover/{{music.AlbumCover}}" alt="" />
+                        </a>
+                        <div class="media-body">
+                            Artst: <label class="label label-info">{{music.ArtistName}} </label><br />
+                            Album Title: <label class="label label-info">{{music.AlbumTitle}}</label><br />
+                            Genre: <label class="label label-info">{{music.Genre}}</label><br />
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <div class="panel-footer" style="height:40px">
+                    <a class="fancybox-media pull-right"
+                       ng-href="{{music.MusicVideoURI}}">
+                        Music Video
+                        <i class="fa fa-video-camera fa-fw"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="text-center">
+            <custom-pager page="{{page}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}"
+                          search-func="search(page)"></custom-pager>
+        </div>
+    </div>
+</div>
+<div id="Add Artist">
+    <a class="btn btn-primary pull-right" ng-href="#/music/add">
+        {{AddItem}}
+        <i class="fa fa-plus-square fa-fw pull-left my-icon"></i>
+    </a>
+</div>
