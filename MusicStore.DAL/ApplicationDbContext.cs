@@ -37,7 +37,7 @@ namespace MusicStore.DAL
             modelBuilder.Configurations.Add(new ApplicationRoleConfiguration());
             #endregion
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
-
+            base.OnModelCreating(modelBuilder);
         }
 
     }
